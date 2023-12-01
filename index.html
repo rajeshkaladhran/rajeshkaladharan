@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>
+</title>
+<link rel="stylesheet" href="animation3.css">
+<link rel="stylesheet" href="jquery-3.7.1.min.js">
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        setInterval(callMe,1000);
+
+    });
+    function callMe(){
+        $(".img").animate({
+            "left":"1200px",
+            'bottom':"400",
+            "width":"300px",
+            "height":"300px"
+        },5000);
+
+         $(".img").animate({
+            "left":"0px",
+            "bottom":"0px",
+         },5000);
+
+        $(".img").animate({
+         "left":"1200px",
+             "bottom":"0px"
+         },5000);
+
+         $(".img").animate({
+             "left":"0px",
+             "bottom":"400px",
+         },5000);
+
+setInterval(function(){
+    $(".birds").fadeIn();
+
+    $(".birds").animate({
+         "left":"1300px",
+      "bottom":"500px"
+     },5000);
+     $(".birds").fadeOut(function(){
+        $(".birds").css({"left":"0px","bottom":"0px"})
+     });
+
+});
+}
+
+</script>
+</head>
+<body>
+    <section class="sec1">
+
+        <div class="">
+            <img src="1656036501_cx.gif" alt="" width="200px" height="200px" class="img">
+            <img src="birds2.gif" alt="" width="200px" height="200px" class="birds" >
+        </div>
+    </section>
+
+
+</body>
+
+</html>
